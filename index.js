@@ -5,6 +5,11 @@ const dotenv = require('dotenv').config();
 const app = express();
 const port = process.env.DB_PORT;
 
+// Controllers
+const book = require('./app/Controllers/BookController');
+
+new book();
+
 class Server {
     constructor() {
 
@@ -16,8 +21,6 @@ class Server {
                 host: process.env.DB_HOST,
                 dialect: process.env.DB_CONNECTION
             });
-
-        console.log(port);
 
     }
 
