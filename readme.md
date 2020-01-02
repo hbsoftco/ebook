@@ -1,7 +1,7 @@
 
 ### Install
 
-Run following command to run project:
+Run the following commands to run the project:
 
 - Clone the project
 
