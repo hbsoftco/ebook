@@ -25,7 +25,10 @@ class Server {
 
     start(port, app) {
         // Creating an express http server
-        app.listen(port, () => console.log(`App listening on port ${port}!`));
+        app.listen(port, (err) => {
+            if (!err) console.log(`App listening on port ${port}!`);
+            else console.log(err)
+        });
     }
 
     initExpressMiddleware(app) {
@@ -56,10 +59,3 @@ class Server {
 }
 
 new Server();
-
-
-
-
-
-
-

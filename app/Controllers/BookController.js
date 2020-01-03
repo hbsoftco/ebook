@@ -14,14 +14,12 @@ class BookController extends Base {
     /**
      * Display a listing of the resource.
      */
-    index = (req, res) => {
-        // res.send(super.sendResponse(req.body, 'sara'));
-        res.send(this.sendResponse(req.body, 'sara'));
-        // res.json(req.body);
+    index = (request, res) => {
+        res.send(this.sendResponse(request.body, 'sara'));
     };
 
     /**
-     * Display a listing of the resource.
+     * Store a newly created resource in storage.
      */
     store(request) { }
 

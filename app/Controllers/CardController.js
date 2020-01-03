@@ -14,7 +14,7 @@ class CardController extends Base {
     index() { }
 
     /**
-     * Display a listing of the resource.
+     * Store a newly created resource in storage.
      */
     store(request) { }
 
