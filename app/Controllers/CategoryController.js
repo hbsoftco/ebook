@@ -1,6 +1,6 @@
-const BaseController = require('./BaseController')
+const Base = require('./BaseController')
 
-class CategoryController {
+class CategoryController extends Base{
 
     /**
      * Create a new controller instance.

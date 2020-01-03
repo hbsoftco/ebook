@@ -3,7 +3,7 @@ class BaseController {
 
     constructor() { }
 
-    static sendResponse(data, message) {
+    sendResponse(data, message) {
         let response = {
             'success': true,
             'data': data,
@@ -12,7 +12,7 @@ class BaseController {
         return response;
     }
 
-    static sendError(error) {
+    sendError(error) {
         let response = {
             'success': false,
             'message': error
@@ -23,4 +23,3 @@ class BaseController {
 }
 
 module.exports = BaseController;
-

@@ -1,16 +1,23 @@
-const BaseController = require('./BaseController')
+const Base = require('./BaseController');
 
-class RateController {
+class RateController extends Base {
 
     /**
      * Create a new controller instance.
      */
-    constructor() { }
+    constructor() {
+        super();
+        console.log('rate cons');
+        const h = super.sendError('error');
+
+    }
 
     /**
      * Display a listing of the resource.
      */
-    index() { }
+    index() {
+        console.log('hossein bajan hastam');
+    }
 
     /**
      * Display a listing of the resource.

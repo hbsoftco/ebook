@@ -1,7 +1,6 @@
-const Many = require('extends-classes');
-const BaseController = require('./BaseController');
+const Base = require('./BaseController')
 
-class CardController extends Many(BaseController) {
+class CardController extends Base {
 
     /**
      * Create a new controller instance.
