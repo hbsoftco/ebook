@@ -1,26 +1,26 @@
-{
-  "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+module.exports = {
+  development: {
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
+    host: process.env.DB_HOST,
+    dialect: 'mariadb',
+    dialectOptions: {
+      timezone: 'Etc/GMT0',
+    },
   },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+  test: {
+    username: process.env.CI_DB_USERNAME,
+    password: process.env.CI_DB_PASSWORD,
+    database: process.env.CI_DB_NAME,
+    host: process.env.CI_DB_HOSTNAME,
+    dialect: process.env.DB_CONNECTION
   },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+  production: {
+    username: process.env.PROD_DB_USERNAME,
+    password: process.env.PROD_DB_PASSWORD,
+    database: process.env.PROD_DB_NAME,
+    host: process.env.PROD_DB_HOSTNAME,
+    dialect: process.env.DB_CONNECTION
   }
-}
+};
