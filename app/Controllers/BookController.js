@@ -1,18 +1,20 @@
-const Base = require('./BaseController')
+const Many = require('extends-classes');
+const BaseController = require('./BaseController');
 
-class BookController {
+class BookController extends Many(BaseController) {
 
     /**
      * Create a new controller instance.
      */
-    constructor() {
-        console.log(process.env.DB_HOST);
-    }
+    constructor() { }
 
     /**
      * Display a listing of the resource.
      */
-    inde() { }
+    index(data) {
+        const hb = BookController.sendResponse('hossein', 'bajan');
+        return hb;
+    }
 
     /**
      * Display a listing of the resource.

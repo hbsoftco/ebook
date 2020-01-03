@@ -10,7 +10,7 @@ class CustomerController {
     /**
      * Display a listing of the resource.
      */
-    inde() { }
+    index() { }
 
     /**
      * Display a listing of the resource.

@@ -1,4 +1,5 @@
 const express = require('express');
+// import express from "express"
 const Sequelize = require('sequelize');
 const dotenv = require('dotenv').config();
 
@@ -6,9 +7,10 @@ const app = express();
 const port = process.env.DB_PORT;
 
 // Controllers
-const book = require('./app/Controllers/BookController');
+const BookController = require('./app/Controllers/BaseController')
+const bookController = new BookController();
 
-new book();
+bookController.index('test');
 
 class Server {
     constructor() {
