@@ -7,13 +7,18 @@ class BookController extends Base {
     /**
      * Create a new controller instance.
      */
-    constructor() { }
+    constructor() {
+        super();
+    }
 
     /**
      * Display a listing of the resource.
      */
-    index() {
-    }
+    index = (req, res) => {
+        // res.send(super.sendResponse(req.body, 'sara'));
+        res.send(this.sendResponse(req.body, 'sara'));
+        // res.json(req.body);
+    };
 
     /**
      * Display a listing of the resource.
@@ -31,4 +36,8 @@ class BookController extends Base {
     destroy() { }
 }
 
-module.exports = BookController  
+module.exports = BookController
+
+exports.index = (req, res) => {
+    res.send('NOT IMPLEMENTED: Site Home Page');
+};
