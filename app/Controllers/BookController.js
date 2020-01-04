@@ -15,7 +15,7 @@ class BookController extends Base {
      */
     index = (request, res) => {
         models.User.findAll().then(users => {
-            // projects will be an array of all Project instances        
+            // users will be an array of all User instances        
             res.send(this.sendResponse(users, 'users list'));
         })
     };
@@ -39,7 +39,3 @@ class BookController extends Base {
 }
 
 module.exports = BookController
-
-exports.index = (req, res) => {
-    res.send('NOT IMPLEMENTED: Site Home Page');
-};
