@@ -4,11 +4,6 @@ const cors = require("cors");
 const bodyParser = require('body-parser')
 const dotenv = require('dotenv').config();
 
-// Controllers
-// const RateController = require('./app/Controllers/RateController')
-// const bookController = new RateController();
-// bookController.index('test');
-
 class Server {
 
     app = express();
