@@ -1,7 +1,6 @@
-const Many = require('extends-classes');
 const Base = require('./BaseController');
+const models = require( '../Models/index');
 
-// class BookController extends Many(BaseController) {
 class BookController extends Base {
 
     /**
@@ -15,13 +14,18 @@ class BookController extends Base {
      * Display a listing of the resource.
      */
     index = (request, res) => {
-        res.send(this.sendResponse(request.body, 'sara'));
+        models.User.findAll().then(users => {
+            // projects will be an array of all Project instances        
+            res.send(this.sendResponse(users, 'users list'));
+        })
     };
 
     /**
      * Store a newly created resource in storage.
      */
-    store(request) { }
+    store = (request, res) => {
+        res.send(this.sendResponse(request.body, ''));
+    };
 
     /**
      * Update the specified resource in storage.

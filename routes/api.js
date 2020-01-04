@@ -4,6 +4,7 @@ module.exports = (app) => {
 
     // Book
     app.get('/', bookController.index);
-    // app.post('/', bookController.store);
+    app.get('/api/books', bookController.index);
+    app.post('/api/book/create', bookController.store);
 
 }
