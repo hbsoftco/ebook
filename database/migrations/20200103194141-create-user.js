@@ -15,7 +15,22 @@ module.exports = {
         type: Sequelize.STRING
       },
       email: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: true,
+        comment: "email is unique"
+      },
+      username: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: true,
+        comment: "username is unique"
+      },
+      password: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: true,
+        comment: "email is unique"
       },
       createdAt: {
         allowNull: false,
@@ -24,6 +39,11 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      deletedAt: {
+        allowNull: true,
+        type: Sequelize.DATE,
+        defaultValue: null,
       }
     });
   },

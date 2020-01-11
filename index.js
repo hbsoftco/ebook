@@ -21,7 +21,8 @@ class Server {
     start(port, app) {
         // Creating an express http server
         app.listen(port, (err) => {
-            if (!err) console.log(`App listening on port ${port}!`);
+            // if (!err) console.log(`App listening on port ${port}!`);
+            if (!err) console.log(`Your server available at http://localhost:${port}`);
             else console.log(err)
         });
     }
