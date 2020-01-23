@@ -13,7 +13,7 @@ class BookController extends Base {
     /**
      * Display a listing of the resource.
      */
-    index = (request, res) => {
+    index = (req, res) => {
         models.User.findAll().then(users => {
             // users will be an array of all User instances        
             res.send(this.sendResponse(users, 'users list'));
@@ -23,14 +23,14 @@ class BookController extends Base {
     /**
      * Store a newly created resource in storage.
      */
-    store = (request, res) => {
-        res.send(this.sendResponse(request.body, ''));
+    store = (req, res) => {
+        res.send(this.sendResponse(req.body, ''));
     };
 
     /**
      * Update the specified resource in storage.
      */
-    update(request, id) { }
+    update(req, id) { }
 
     /**
      * Remove the specified resource from storage.     
